@@ -7,10 +7,10 @@ def canUnlockAll(boxes):
     Prototype: def canUnlockAll(boxes)
     boxes is a list of lists """
 
-    l = len(boxes)
-    for k in range(1, l):
+    length = len(boxes)
+    for k in range(1, length):
         opAll = False
-        for box in range(l):
+        for box in range(length):
             if k in boxes[box] and box != k:
                 opAll = True
                 break
