@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" create methode that define if all the boxes can be opened or no"""
+    
 def canUnlockAll(boxes):
     """ a method that determines if all the boxes can be opened.
     Prototype: def canUnlockAll(boxes)
