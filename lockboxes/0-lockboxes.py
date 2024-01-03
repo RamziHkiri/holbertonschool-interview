@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """ create methode that define if all the boxes can be opened or no"""
-    
+
+
 def canUnlockAll(boxes):
     """ a method that determines if all the boxes can be opened.
     Prototype: def canUnlockAll(boxes)
     boxes is a list of lists """
 
-    l= len(boxes)
+    l = len(boxes)
     for k in range(1, l):
         opAll = False
         for box in range(l):
