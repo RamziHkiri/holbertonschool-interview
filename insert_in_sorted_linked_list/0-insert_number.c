@@ -14,7 +14,7 @@ listint_t *insert_node(listint_t **head, int number)
 	listint_t *new_list;
 	listint_t *current;
 
-    if (*head == NULL)
+    if (head == NULL)
     {
         return (NULL);
     }else{
