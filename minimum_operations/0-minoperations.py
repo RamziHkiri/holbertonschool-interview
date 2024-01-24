@@ -3,7 +3,7 @@
 
 
 def minOperations(n):
-    """ method min operation """
+    """ method min operation needed to get 'h' n time """
 # initialize the start file
     start = 'H'
     # the new string after every paste operation
