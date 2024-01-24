@@ -9,7 +9,6 @@ def minOperations(n):
     start='H'
     newString=start
     num = 0
-    
     while (len(newString) < n ):
         num = num + 1
         newString= newString + start
