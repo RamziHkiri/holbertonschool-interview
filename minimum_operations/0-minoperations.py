@@ -19,17 +19,14 @@ def minOperations(n):
     newString = start
     # number of operation
     num = 0
-
     while(len(newString) < n):
         # increment the number of peration by 1 and paste
         num = num + 1
         newString = newString + start
-
         if(len(newString) > n):
             return 0
         # if n divided by the length of the new string we will copy all
         # and increment the number of operation by one
-
         if(n % len(newString) == 0):
             start = newString
             num = num + 1
