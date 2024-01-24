@@ -9,9 +9,10 @@ def minOperations(n):
 
     returns:
         the minimum number of operations needed to result in n characters
-        or 0 if n is impossible to achieve"""
+        or 0 if n is impossible to achieve
+    """
 
-# initialize the start file
+    # initialize the start file
     start = 'H'
     # the new string after every paste operation
     newString = start
