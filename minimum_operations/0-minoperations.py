@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-""" method that calculates the fewest number of operations needed"""
+"""Module which contains minoperations function"""
 
 
 def minOperations(n):
-    """ method min operation needed to get 'h' n time
-     parameters:
-        n [int]: number of copies of the character desired
+    """ Calculates the fewest number of operations needed
+        to result in exactly n H characters in the file
 
-    returns:
-        the minimum number of operations needed to result in n characters
-        or 0 if n is impossible to achieve
+        Args:
+            n: repetitions of H
+
+        Returns:
+            number of operations (Copy & Paste) to reach n Hs
     """
 
     # initialize the start file
