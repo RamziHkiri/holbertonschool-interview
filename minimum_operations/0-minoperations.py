@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Module which contains minoperations function"""
+'''Module which contains minoperations function'''
 
 
 def minOperations(n):
-    """ Calculates the fewest number of operations needed
+    '''Calculates the fewest number of operations needed
         to result in exactly n H characters in the file
 
         Args:
@@ -11,8 +11,8 @@ def minOperations(n):
 
         Returns:
             number of operations (Copy & Paste) to reach n Hs
-    """
-    
+    '''
+
     start = 'H'
     newString = start
     num = 0
@@ -24,4 +24,5 @@ def minOperations(n):
         if(n % len(newString) == 0):
             start = newString
             num = num + 1
+
     return num
