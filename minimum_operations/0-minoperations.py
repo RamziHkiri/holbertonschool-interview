@@ -12,7 +12,8 @@ def minOperations(n):
         Returns:
             number of operations (Copy & Paste) to reach n Hs
     """
-
+    if type(n) is not int or n <= 1:
+        return 0
     # initialize the start file
     start = 'H'
     # the new string after every paste operation
@@ -23,8 +24,6 @@ def minOperations(n):
         # increment the number of peration by 1 and paste
         num = num + 1
         newString = newString + start
-        if(len(newString) > n):
-            return 0
         # if n divided by the length of the new string we will copy all
         # and increment the number of operation by one
         if(n % len(newString) == 0):
