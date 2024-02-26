@@ -9,7 +9,7 @@
 int is_palindrome(unsigned long n)
 {
 char str[20];
-int left = 0, right = 0;
+int left = 0, right;
 sprintf(str, "%ld", n);
 right = strlen(str) - 1;
 while (left <= right && str[left] == str[right] )
