@@ -9,15 +9,29 @@ int indice;
 size_t i;
 for (i = 0; i < size ; i++)
 new_line[i] = 0;
+
 if (direction == SLIDE_LEFT)
 {
 indice = 0;
+
 for (i = 0; i < size ; i++)
 {
 if (line[i] != 0)
 {
 if (line[i] != new_line[indice])
+{
+if (line[i]< line[i+1])
+{
 new_line[indice] = line[i];
+indice++;
+}
+else
+{
+new_line[indice] = line[i];
+
+}
+
+}
 else
 {
 new_line[indice] += line[i];
