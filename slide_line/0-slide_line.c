@@ -4,7 +4,7 @@
 #include "slide_line.h"
 int slide_line(int *line, size_t size, int direction)
 {
-int new_line[size];
+int new_line[100];
 int indice;
 size_t i;
 for (i = 0; i < size ; i++)
@@ -45,7 +45,7 @@ indice--;
 }
 }   
 }
-for (size_t i = 0; i < size ; i++)
+for (i = 0; i < size ; i++)
 line[i] = new_line[i];
 return (1) ;
 }
