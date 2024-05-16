@@ -7,7 +7,7 @@
  * @size: size of the array
  * @value: int to search about
  *
- * Return: length of printed tree after process
+ * Return: index of the searched value or -1 if not found
  */
 
 int advanced_binary(int *array, size_t size, int value)
