@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/* advanced_binary - function search using binary search
- *
+/**
+ * advanced_binary - function search using binary search
  * @array: sorted array of integer
  * @size: size of the array
  * @value: int to search about
