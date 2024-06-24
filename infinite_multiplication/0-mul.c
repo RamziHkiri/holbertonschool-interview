@@ -6,7 +6,8 @@
 
 /**
  * main -function that multiplies 2 positive numbers
- *
+ *@argc: number of parametres
+ *@argv: array of parametres
  * Return: Always 0.
  */
 
