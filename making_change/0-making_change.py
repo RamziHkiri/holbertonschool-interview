@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ fewest number of coins needed to meet a given amount total """
 
+
 def makeChange(coins, total):
     """
     mkechange challenge
@@ -23,4 +24,3 @@ def makeChange(coins, total):
         else:
             i += 1
     return -1
-    
