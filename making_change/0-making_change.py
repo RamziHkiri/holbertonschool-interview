@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-
+""" fewest number of coins needed to meet a given amount total """
 
 def makeChange(coins, total):
-    
+    """make change function """
     if total <= 0:
         return 0
     coins.sort(reverse=True)
