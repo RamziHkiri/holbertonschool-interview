@@ -3,7 +3,7 @@
 
 
 def makeChange(coins, total):
-    """make change function"""
+    """make change function    """
 
     if total <= 0:
         return 0
@@ -14,10 +14,11 @@ def makeChange(coins, total):
     counter = 0
     num_coins = len(coins)
     while sum < total and i < num_coins:
-        while coins[i] <= total - sum:
+        if coins[i] <= total - sum:
             sum += coins[i]
             counter += 1
             if sum == total:
                 return counter
-        i += 1
+        else:
+            i += 1
     return -1
