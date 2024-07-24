@@ -2,18 +2,25 @@
 """ fewest number of coins needed to meet a given amount total """
 
 def makeChange(coins, total):
-    """make change function """
+    """
+    mkechange challenge
+    """
+
     if total <= 0:
         return 0
+
     coins.sort(reverse=True)
-    num = 0
+    sum = 0
     i = 0
-    while total // coins[i] >= 1:
-        num += total // coins[i]
-        total %= coins[i]
-        i += 1
-        if total == 0 :
-            return num
+    counter = 0
+    num_coins = len(coins)
+    while sum < total and i < num_coins:
+        if coins[i] <= total - sum:
+            sum += coins[i]
+            counter += 1
+            if sum == total:
+                return counter
+        else:
+            i += 1
     return -1
-        
     
