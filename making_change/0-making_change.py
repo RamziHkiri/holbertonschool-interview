@@ -3,9 +3,7 @@
 
 
 def makeChange(coins, total):
-    """
-    mkechange challenge
-    """
+    """make change function"""
 
     if total <= 0:
         return 0
@@ -16,11 +14,10 @@ def makeChange(coins, total):
     counter = 0
     num_coins = len(coins)
     while sum < total and i < num_coins:
-        if coins[i] <= total - sum:
+        while coins[i] <= total - sum:
             sum += coins[i]
             counter += 1
             if sum == total:
                 return counter
-        else:
-            i += 1
+        i += 1
     return -1
