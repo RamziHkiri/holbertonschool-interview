@@ -53,6 +53,9 @@ List *add_node_begin(List **list, char *str) {
     }
 
     new_node->str = str;
+    if (list == NULL) {
+        return new_node;
+    }
     if (new_node->str == NULL) {
         free(new_node);
         return NULL;
