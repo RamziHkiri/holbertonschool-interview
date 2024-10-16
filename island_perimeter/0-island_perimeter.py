@@ -1,48 +1,29 @@
 #!/usr/bin/python3
 """
-Module to calculate the perimeter of an island described in a grid.
-
-The grid is a list of lists where:
-- 0 represents water.
-- 1 represents land.
+Module used to
 """
 
 
 def island_perimeter(grid):
-    """
-    Calculate the perimeter of an island in the grid.
+    """[summary]
 
     Args:
-        grid (list[list[int]]): A 2D list of integers representing the grid.
-            - 0 represents water.
-            - 1 represents land.
+        grid ([type]): [description]
 
     Returns:
-        int: The perimeter of the island.
+        [type]: [description]
     """
-    val = 0
-    rows = len(grid)
-    cols = len(grid[0])
 
-    def is_water(x, y):
-        """
-        Helper function to determine if a cell is water or out of bounds.
+    perimeter = 0
+    m = len(grid)
+    n = len(grid[0])
 
-        Args:
-            x (int): Row index of the cell.
-            y (int): Column index of the cell.
+    for i in range(m):
+        for j in range(n):
+            if grid[i][j] == 1:
+                for x, y in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
+                    a, b = i + x, j + y
+                    if a >= m or b >= n or a < 0 or b < 0 or grid[a][b] == 0:
+                        perimeter += 1
 
-        Returns:
-            int: 1 if the cell is water or out of bounds, 0 otherwise.
-        """
-        return x < 0 or y < 0 or x >= rows or y >= cols or grid[x][y] == 0
-
-    for column in range(rows):
-        for row in range(cols):
-            if grid[column][row] == 1:
-                val += is_water(column - 1, row)
-                val += is_water(column + 1, row)
-                val += is_water(column, row + 1)
-                val += is_water(column, row - 1)
-
-    return val
+    return perimeter
