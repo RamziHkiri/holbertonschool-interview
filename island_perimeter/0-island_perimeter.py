@@ -17,6 +17,7 @@ def island_perimeter(grid):
     cols = len(grid[0])
 
     def is_water(x, y):
+        """determine if a cell is water or out of bounds."""
         return x < 0 or y < 0 or x >= rows or y >= cols or grid[x][y] == 0
 
     for column in range(rows):
